@@ -34,8 +34,6 @@ export function getUser() {
 
 export function signInOrUp(user) {
   return dispatch => {
-    user.picture = user.picture.data.url
-
     request
       .post(api.user.authenticate)
       .send(user)

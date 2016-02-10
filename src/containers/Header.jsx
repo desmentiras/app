@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 import './Header.css'
 
-import {unsetUser} from 'actions/authActions'
+import {unsetUser, signInOrUp} from 'actions/authActions'
 
 import Auth from 'utils/auth'
 
@@ -18,8 +18,31 @@ class Header extends Component {
 
     return (
       <header className="header">
-        {user && this.renderProfile()}
+        <div className="container">
+          <div className="row">
+            <div className="six columns">
+              <div className="header__presentation">
+                <h5 className="header__logo">desmentiras</h5>
+              </div>
+            </div>
+
+            <div className="six columns">
+              <div className="header__content">
+                {!user && this.renderAuth() || this.renderProfile()}
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
+    )
+  }
+
+  renderAuth() {
+    return (
+      <div className="header__auth">
+        <span>Seja bem-vindo(a)!</span>
+        <button onClick={this.login.bind(this)}>Entrar com o Face</button>
+      </div>
     )
   }
 
@@ -27,11 +50,25 @@ class Header extends Component {
     const {user} = this.props
 
     return (
-      <div className="header__profile">
-         <img className="header__avatar o-avatar" src={user.picture} />
-         <span>{user.name} &middot; <button onClick={this.logout.bind(this)}>Sair</button></span>
+      <div className="six columns">
+        <div className="header__profile">
+          <img
+            className="header__avatar [ o-avatar o-avatar--inline ]"
+            src={user.picture} />
+
+          <span>{user.reputation} <button onClick={this.logout.bind(this)}>Sair</button></span>
+        </div>
       </div>
     )
+  }
+
+  login() {
+    const {dispatch} = this.props
+
+    this.auth.login()
+      .then(user => dispatch(signInOrUp(user)), () => {
+        // error
+      })
   }
 
   logout() {
@@ -39,16 +76,15 @@ class Header extends Component {
 
     dispatch(unsetUser())
 
-    FB.getLoginStatus(function(response) {
-      if (response && response.status === 'connected') {
-        console.log('here?');
-        FB.logout(function(response) {
-          FB.logout(() => {
-            dispatch(unsetUser())
-          })
-        });
-      }
-    })
+    // FB.getLoginStatus(function(response) {
+    //   if (response && response.status === 'connected') {
+    //     FB.logout(function(response) {
+    //       FB.logout(() => {
+    //         dispatch(unsetUser())
+    //       })
+    //     });
+    //   }
+    // })
   }
 }
 

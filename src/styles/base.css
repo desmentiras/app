@@ -1,4 +1,5 @@
 @import "~normalize.css/normalize.css";
+@import "~skeleton-css/css/skeleton.css";
 /*@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:500");*/
 
 @import "./base/typography.css";
