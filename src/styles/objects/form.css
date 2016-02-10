@@ -1,0 +1,7 @@
+.o-input-group {
+  margin-top: 10px;
+}
+
+  .o-input-group:first-child {
+    margin-top: 0;
+  }

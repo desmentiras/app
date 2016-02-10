@@ -1,0 +1,13 @@
+.o-avatar {
+  position: relative;
+  display: block;
+  width:  30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.o-avatar--inline {
+  top: 10px;
+  margin-left: 5px;
+  display: inline-block;
+}

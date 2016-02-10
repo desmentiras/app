@@ -1,0 +1,10 @@
+{
+  "appId": "desmenira",
+  "apiKey": "9ce80a581e52e7552025c63aa54662de2d9340ad37d95504770e3ef279bacc12",
+  "public": "./build",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

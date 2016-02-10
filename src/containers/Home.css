@@ -1,0 +1,24 @@
+.home {
+  position: relative;
+  top: 0;
+  width:  100%;
+  height: calc(100% - 150px);
+}
+
+.welcome {
+  height: 100%;
+  text-align: center;
+}
+
+.authentication__method {
+  position: relative;
+  float: left;
+  width: 50%;
+  opacity: .5;
+  transition: opacity .1s ease-in-out;
+}
+
+  .authentication__method:hover,
+  .authentication__method.is-active {
+    opacity: 1;
+  }

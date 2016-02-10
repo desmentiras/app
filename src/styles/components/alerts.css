@@ -1,0 +1,18 @@
+.c-alert {
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 3px;
+  font-size: .8rem;
+}
+
+.c-alert--warning {
+  border: 1px solid #b5b497;
+  background-color: #f6f4c6;
+  color: #737263;
+}
+
+.c-alert--error {
+  border: 1px solid #b59797;
+  background-color: #f6ccc6;
+  color: #736363;
+}

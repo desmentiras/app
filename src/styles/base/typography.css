@@ -1,0 +1,22 @@
+/* colors */
+.font-color-main {
+  color: #49B7AA;
+}
+
+/* weights */
+.font-regular {
+  font-weight: 300;
+}
+
+.font-thin {
+  font-weight: 200;
+}
+
+/* styles */
+.font-opaque {
+  color: #999;
+  font-weight: 300;
+}
+
+.font-default {
+}
