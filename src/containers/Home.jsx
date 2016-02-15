@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import './Home.css'
 
 /* Containers */
-import Header from './Header'
 import News from './News'
 
 /* Utils */
