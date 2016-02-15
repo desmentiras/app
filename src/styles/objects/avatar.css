@@ -1,6 +1,7 @@
 .o-avatar {
   position: relative;
   display: block;
+  margin: 0 10px;
   width:  30px;
   height: 30px;
   border-radius: 100%;
@@ -10,4 +11,9 @@
   top: 10px;
   margin-left: 5px;
   display: inline-block;
+}
+
+.o-avatar--big {
+  width: 45px;
+  height: 45px;
 }

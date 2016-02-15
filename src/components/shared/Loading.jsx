@@ -8,7 +8,11 @@ class Loading extends Component {
     const {center} = this.props
     const className = classnames('loading', {'loading--center': center})
 
-    return <div className={className}></div>
+    return (
+      <div className="loading__container">
+        <div className={className}></div>
+      </div>
+    )
   }
 }
 

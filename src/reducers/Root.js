@@ -2,12 +2,10 @@ import {routerStateReducer as router} from 'redux-router'
 import {combineReducers} from 'redux'
 
 import userReducer from 'reducers/userReducer'
-import playerReducer from 'reducers/playerReducer'
-import civilizationReducer from 'reducers/civilizationReducer'
+import postsReducer from 'reducers/postsReducer'
 
 export default combineReducers({
   userReducer,
-  playerReducer,
-  civilizationReducer,
+  postsReducer,
   router
 })

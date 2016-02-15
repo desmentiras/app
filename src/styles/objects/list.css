@@ -1,0 +1,10 @@
+.o-list {
+  display: block;
+  width: 100%;
+}
+
+.o-list-item {
+  display: block;
+  width: 100%;
+  list-style: none;
+}

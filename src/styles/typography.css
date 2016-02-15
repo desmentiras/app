@@ -1,0 +1,26 @@
+.text-small {
+  font-size: 1.1rem !important;
+}
+
+.text-medium {
+  font-size: 1.6rem !important;
+}
+
+.text-muted {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.text-title-principal {
+  color: #fff;
+}
+
+.text-cite {
+  font-family: Georgia, serif;
+  font-weight: 200;
+}
+
+.text-paragraph {
+  font-size: 1.8rem;
+  color: #333;
+}

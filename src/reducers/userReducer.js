@@ -11,7 +11,6 @@ function user(state = {user: null}, action) {
         user: action.user
       })
     case UNSET_USER:
-    console.log('unset');
       return Object.assign({}, state, {user: null})
     default:
       return state

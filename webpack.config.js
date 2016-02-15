@@ -12,7 +12,7 @@ var htmlIndex = new HtmlWebpackPlugin({
 
 var devServer = isDev ? [
   'webpack/hot/dev-server',
-  'webpack-dev-server/client?http://app.localhost'
+  'webpack-dev-server/client?http://localhost:8090'
 ] : []
 
 var cssLoader = isDev ? 'css' : 'css?minimize'
@@ -46,6 +46,13 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['style', cssLoader, 'autoprefixer', purifyCssLoader]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7interlaced=false'
+        ]
       }
     ]
   },

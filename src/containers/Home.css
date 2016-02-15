@@ -2,23 +2,33 @@
   position: relative;
   top: 0;
   width:  100%;
-  height: calc(100% - 150px);
+  height: calc(100% - 50px);
+  background: green;
 }
 
-.welcome {
+.home__hero {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width:  100%;
   height: 100%;
-  text-align: center;
+  background-image: url('../images/hero.jpeg');
+  background-size: cover;
+  background-position: bottom;
 }
 
-.authentication__method {
+.home__content {
   position: relative;
-  float: left;
-  width: 50%;
-  opacity: .5;
-  transition: opacity .1s ease-in-out;
+  z-index: 2;
+  width:  100%;
+  height: 100%;
 }
 
-  .authentication__method:hover,
-  .authentication__method.is-active {
-    opacity: 1;
-  }
+.home__presentation {
+  padding: 80px 0;
+  color: #fff;
+}
+
+.home__sub-title {
+  color: #ddd;
+}

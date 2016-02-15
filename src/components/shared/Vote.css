@@ -1,0 +1,46 @@
+.vote {
+  position: relative;
+  height: 65px;
+  text-align: center;
+}
+
+.vote__balance {
+  position: relative;
+  top: 20px;
+}
+
+.vote__arrow {
+  position: absolute;
+  height: 0;
+  width:  0;
+  border: solid transparent;
+  border-width: 15px;
+  content: " ";
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.vote__arrow--up {
+  top: -15px;
+  border-bottom-color: #9291a4;
+  transition: border-bottom-color .1s ease-in-out;
+}
+
+.vote__arrow--down {
+  top: 50px;
+  border-top-color: #9291a4;
+  transition: border-top-color .1s ease-in-out;
+}
+
+  .vote__arrow--up:hover {
+    border-bottom-color: #b4b3c7;
+  }
+
+  .vote__arrow--down:hover {
+    border-top-color: #b4b3c7;
+  }
+
+.vote__arrow--up.is-inactive,
+.vote__arrow--down.is-inactive {
+  opacity: .2;
+}

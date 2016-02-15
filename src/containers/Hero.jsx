@@ -4,7 +4,6 @@ import './Home.css'
 
 /* Containers */
 import Header from './Header'
-import News from './News'
 
 /* Utils */
 import Auth from 'utils/auth'
@@ -21,20 +20,21 @@ class Home extends Component {
   }
 
   render() {
-    return (
-      <div className="home">
-        <div className="home__content container">
-          <div className="home__presentation u-text-align-center">
-            <h2>Está na hora de fazer da internet um lugar melhor</h2>
-            <p className="home__sub-title text-medium">
-              Vamos juntos desmentir notícias falsas ou tendenciosas para criar
-              cidadãos mais inteligentes
-            </p>
-          </div>
+    const {user} = this.props
 
-          <News />
+    return (
+      <div className="page">
+        <Header />
+
+        <div className="home o-table">
+          <div className="hero o-table-cell u-align-middle">
+            <h2 className="font-regular">
+              Está na hora de desmentir um pouco a internet.
+            </h2>
+
+            {user && this.renderPublishUnlie() || this.renderAuthenticationButton()}
+          </div>
         </div>
-        <div className="home__hero"></div>
       </div>
     )
   }
@@ -68,7 +68,7 @@ Home.propTypes = {
 }
 
 const mapStateToProps = state => {
-  const {user}  = state.userReducer.user
+  const {user} = state.userReducer.user
 
   return {user}
 }

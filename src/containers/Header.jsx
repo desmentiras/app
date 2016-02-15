@@ -22,7 +22,12 @@ class Header extends Component {
           <div className="row">
             <div className="six columns">
               <div className="header__presentation">
-                <h5 className="header__logo">desmentiras</h5>
+                <a
+                  className="header__anchor a-prevent-default"
+                  href="/">
+
+                  <h5 className="header__logo">desmentiras</h5>
+                </a>
               </div>
             </div>
 
@@ -39,7 +44,7 @@ class Header extends Component {
 
   renderAuth() {
     return (
-      <div className="header__auth">
+      <div className="header__auth u-float-right">
         <span>Seja bem-vindo(a)!</span>
         <button onClick={this.login.bind(this)}>Entrar com o Face</button>
       </div>
@@ -50,14 +55,13 @@ class Header extends Component {
     const {user} = this.props
 
     return (
-      <div className="six columns">
-        <div className="header__profile">
-          <img
-            className="header__avatar [ o-avatar o-avatar--inline ]"
-            src={user.picture} />
+      <div className="header__profile u-float-right">
+        <img
+          className="header__avatar [ o-avatar o-avatar--inline ]"
+          src={user.picture} />
 
-          <span>{user.reputation} <button onClick={this.logout.bind(this)}>Sair</button></span>
-        </div>
+        <span className="text-small">{user.reputation}</span>
+        {/*<span><button onClick={this.logout.bind(this)}>Sair</button></span>*/}
       </div>
     )
   }

@@ -1,6 +1,9 @@
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 
+import Header from './Header'
+import Footer from './Footer'
+
 import {getUser} from 'actions/authActions'
 
 class Layout extends Component {
@@ -13,6 +16,8 @@ class Layout extends Component {
 
     return (
       <div className="layout">
+        <Header />
+
         {children}
       </div>
     )
