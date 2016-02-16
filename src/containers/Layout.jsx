@@ -4,6 +4,8 @@ import {connect} from 'react-redux'
 import Header from './Header'
 import Footer from './Footer'
 
+import Loading from '../components/shared/Loading'
+
 import {getUser} from 'actions/authActions'
 
 class Layout extends Component {
@@ -12,7 +14,9 @@ class Layout extends Component {
   }
 
   render() {
-    const {children} = this.props
+    const {children, user} = this.props
+
+    if (user.isFetching) { return <Loading /> }
 
     return (
       <div className="layout">
@@ -29,7 +33,7 @@ Layout.propTypes = {
 }
 
 const mapStateToProps = state => {
-  const {user} = state.userReducer.user
+  const {user} = state.userReducer
 
   return {user}
 }
