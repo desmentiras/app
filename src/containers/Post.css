@@ -126,9 +126,19 @@
   width: 100%;
 }
 
+.post__author-avatar {
+  margin-right: 10px;
+}
+
+.post__author-rep {
+  position: relative;
+  font-size: 1.1rem;
+}
+
 .post__widget {
+  padding: 10px;
+  box-sizing: border-box;
   width: 100%;
   border: 1px solid #eee;
   border-radius: 3px;
-  padding: 10px;
 }

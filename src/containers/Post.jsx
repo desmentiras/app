@@ -129,11 +129,17 @@ class Post extends Component {
         <div className="post__widget u-float-left">
           <div className="post__widget-author">
             <img
-              className="o-avatar o-avatar--big o-avatar--inline"
+              className="post__author-avatar [ o-avatar o-avatar--margin-right o-avatar--big ] u-float-left"
               src={user.picture}
               alt={user.name} />
 
-            <h6 className="u-display-inline-block">{user.name}</h6>
+            <section className="post__author-details u-float-left">
+              <span className="post__author-name">{user.name}</span>
+              <div className="post__author-rep">
+                <div className="o-icon-rep"></div>
+                <span className="post__author-rep u-position-absolute">{user.reputation}</span>
+              </div>
+            </section>
           </div>
         </div>
       </div>

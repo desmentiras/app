@@ -1,0 +1,11 @@
+.o-icon {}
+.o-icon-rep {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  margin-right: 2px;
+  width:  5px;
+  height: 5px;
+  border-radius: 500%;
+  background-color: #53ac6c;
+}

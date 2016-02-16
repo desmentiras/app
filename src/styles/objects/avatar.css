@@ -17,3 +17,7 @@
   width: 45px;
   height: 45px;
 }
+
+.o-avatar--margin-right {
+  margin: 0 10px 0 0;
+}

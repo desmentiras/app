@@ -11,11 +11,13 @@
 @import "./objects/form.css";
 @import "./objects/table.css";
 @import "./objects/avatar.css";
+@import "./objects/icon.css";
 
 @import "./utilities/align.css";
 @import "./utilities/float.css";
 @import "./utilities/text.css";
 @import "./utilities/display.css";
+@import "./utilities/position.css";
 
 html {
   font-size: 62.5%;
