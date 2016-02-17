@@ -12,6 +12,7 @@
 @import "./objects/table.css";
 @import "./objects/avatar.css";
 @import "./objects/icon.css";
+@import "./objects/list.css";
 
 @import "./utilities/align.css";
 @import "./utilities/float.css";

@@ -20,7 +20,7 @@ class Header extends Component {
       <header className="header">
         <div className="container">
           <div className="row">
-            <div className="six columns">
+            <div className="three columns">
               <div className="header__presentation">
                 <a
                   className="header__anchor a-prevent-default"
@@ -31,10 +31,27 @@ class Header extends Component {
               </div>
             </div>
 
-            <div className="six columns">
-              <div className="header__content">
-                {!user && this.renderAuth() || this.renderProfile()}
-              </div>
+            <div className="nine columns">
+              <nav className="header__nav u-float-right">
+                <ul className="header__nav-list [ o-list o-list--inline ]">
+                  <li className="header__item o-list__item">
+                    <a className="header__anchor" href="/">Home</a>
+                  </li>
+                  <li className="header__item o-list__item">
+                    <a className="header__anchor" href="/entenda">Sexo</a>
+                  </li>
+                  <li className="header__item o-list__item">
+                    {!user && this.renderAuth() || this.renderProfile()}
+                  </li>
+                  {user && (
+                    <li className="header__item o-list__item">
+                      <button
+                        className="header__publish-button button-primary"
+                        onClick={this.publish.bind(this)}>Publicar</button>
+                    </li>
+                  )}
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
@@ -43,25 +60,19 @@ class Header extends Component {
   }
 
   renderAuth() {
-    return (
-      <div className="header__auth u-float-right">
-        <span>Seja bem-vindo(a)!</span>
-        <button onClick={this.login.bind(this)}>Entrar com o Face</button>
-      </div>
-    )
+    return <button onClick={this.login.bind(this)}>Entrar com o Face</button>
   }
 
   renderProfile() {
     const {user} = this.props
 
     return (
-      <div className="header__profile u-float-right">
+      <div className="header__profile">
         <img
           className="header__avatar [ o-avatar o-avatar--inline ]"
           src={user.picture} />
 
         <span className="text-small">{user.reputation}</span>
-        {/*<span><button onClick={this.logout.bind(this)}>Sair</button></span>*/}
       </div>
     )
   }
@@ -90,6 +101,8 @@ class Header extends Component {
     //   }
     // })
   }
+
+  publish() {}
 }
 
 Header.propTypes = {

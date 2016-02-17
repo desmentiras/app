@@ -3,8 +3,21 @@
   width: 100%;
 }
 
-.o-list-item {
+.o-list--inline {
+  display: inline-block;
+  margin: 0;
+}
+
+.o-list--inline .o-list__item {
+  display: inline-block;
+  margin: 0 0 0 20px;
+}
+
+  .o-list--inline .o-list__item:first-child {
+    margin: 0;
+  }
+
+.o-list__item {
   display: block;
-  width: 100%;
   list-style: none;
 }
