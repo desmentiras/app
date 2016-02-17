@@ -33,6 +33,7 @@ class Home extends Component {
 
           <News />
         </div>
+        <div className="home__overlay"></div>
         <div className="home__hero"></div>
       </div>
     )
