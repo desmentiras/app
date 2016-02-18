@@ -6,6 +6,10 @@
   font-size: 1.6rem !important;
 }
 
+.text-big {
+  font-size: 1.9rem !important;
+}
+
 .text-muted {
   font-size: 1rem;
   color: #ccc;
@@ -23,4 +27,16 @@
 .text-paragraph {
   font-size: 1.8rem;
   color: #333;
+}
+
+.text-silent {
+  margin: 0;
+}
+
+.text-silent--light {
+  color: #ddd;
+}
+
+.text-silent--dark {
+  color: #666;
 }

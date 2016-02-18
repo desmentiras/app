@@ -16,5 +16,10 @@ export default {
     downvoteById(id) {
       return `${API_ENDPOINT}/posts/${id}/downvote`
     }
+  },
+  links: {
+    getInfo(url) {
+      return `${API_ENDPOINT}/links/?url=${url}`
+    }
   }
 }

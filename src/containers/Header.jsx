@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
+import {pushState} from 'redux-router'
 import './Header.css'
 
 import {unsetUser, signInOrUp} from 'actions/authActions'
@@ -102,7 +103,9 @@ class Header extends Component {
     // })
   }
 
-  publish() {}
+  publish() {
+    this.props.dispatch(pushState(null, '/publicar'))
+  }
 }
 
 Header.propTypes = {

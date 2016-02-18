@@ -39,14 +39,6 @@ class Home extends Component {
     )
   }
 
-  renderAuthenticationButton() {
-    return <button onClick={this.authenticate.bind(this)}>Autenticar com o face</button>
-  }
-
-  renderPublishUnlie() {
-    return <button onClick={this.publish.bind(this)}>Publicar desmentira</button>
-  }
-
   authenticate() {
     const {dispatch} = this.props
 
@@ -56,10 +48,6 @@ class Home extends Component {
       }, () => {
         // error
       })
-  }
-
-  publish() {
-
   }
 }
 
